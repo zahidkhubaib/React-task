@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import EmpListing from './EmpListing';
-import EmpCreate from './EmpCreate';
-import EmpDetail from './EmpDetail';
-import EmpEdit from './EmpEdit';
-import Login from './login';
-import Signup from './signup';
+import EmpListing from './component/list/EmpListing';
+import EmpCreate from './component/create-bus/EmpCreate';
+import EmpDetail from './component/detiail/EmpDetail';
+import EmpEdit from './component/edit/EmpEdit';
+import Login from './component/login/login';
+import Signup from './component/signup/signup';
 
 function App() {
   return (
@@ -15,12 +15,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Login />}></Route>
-          <Route path='/employee' element={<EmpListing />}></Route>
+          <Route path='/dashboard' element={<EmpListing />}></Route>
           <Route path='/Signup' element={<Signup />}></Route>
           <Route path='/create' element={<EmpCreate />}></Route>
 
-          <Route path='/employee/detail/:empid' element={<EmpDetail />}></Route>
-          <Route path='/employee/edit/:empid' element={<EmpEdit />}></Route>
+          <Route path='/dashboard/detail/:empid' element={<EmpDetail />}></Route>
+          <Route path='/dashboard/edit/:empid' element={<EmpEdit />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
