@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
-import { SignupApi} from './api/user';
+import { SignupApi} from '../../api/user';
 
 const Signup = () => {
     // const [id, idchange] = useState("");
